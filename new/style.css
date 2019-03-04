@@ -1,0 +1,121 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: navy;
+    color: white;
+    height: 73px;
+    vertical-align: middle;
+}
+
+.right {
+    text-align: right;
+}
+
+nav img {
+    width: 68px;
+    vertical-align: middle;
+}
+
+nav a, nav span {
+    color: white;
+    padding: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.dropdown-content {
+    font-size: 0%;
+    transition: font-size 1s ease;
+    display: inline;
+}
+
+.dropdown:hover .dropdown-content {
+    font-size: 100%;
+}
+
+.dropdown:hover .dropdown-content a {padding: 15px;}
+
+.dropdown {
+    display: inline;
+}
+
+nav div {
+    display: inline;
+    height: 72px;
+    vertical-align: middle;
+}
+
+.dropdown-content a {
+    padding: 0;
+    transition: padding 1s ease;
+}
+
+.button {
+    border: white 1px solid;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    background: navy;
+}
+
+.button:hover {
+    color: navy;
+    background: white;
+}
+
+header {
+    margin-top: 73px;
+    background: navy;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.inline div {padding: 2%;}
+
+.inline {
+    display: flex;
+}
+
+section {
+    padding: 2%;
+    background: white;
+    color: navy;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+section.dark {
+    background: navy;
+    color: white;
+}
+
+a {
+    color: inherit;
+}
+
+section a.button {
+    margin: 5px;
+}
+
+footer {
+    padding: 2%;
+    background: #00043b;
+    color: white;
+}
+
+nav .right {
+    margin-top: 25px;
+    float: right;
+}
