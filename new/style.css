@@ -32,8 +32,11 @@ nav a, nav span {
 
 .dropdown-content {
  font-size: 0%;
- transition: font-size 1s ease;
  display: inline;
+ position: fixed;
+ top: 20px;
+ right: 125px;
+ padding-top: 53px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -56,7 +59,10 @@ nav div {
 
 .dropdown-content a {
  padding: 0;
- transition: padding 1s ease;
+ background: white;
+ color: navy;
+ display: block;
+ text-align: left;
 }
 
 .button {
@@ -70,6 +76,7 @@ nav div {
 .button:hover {
  color: navy;
  background: white;
+ border-color: navy;
 }
 
 header {
