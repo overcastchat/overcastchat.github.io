@@ -1,11 +1,6 @@
 body {
  font-family: Arial;
  margin: 0;
- font-size: 15px;
-}
-
-main {
- padding-top: 90px;
 }
 
 nav {
@@ -13,68 +8,19 @@ nav {
  top: 0;
  left: 0;
  width: 100%;
+ background: navy;
  color: white;
+ height: 73px;
  vertical-align: middle;
- -webkit-transition: 0.2s;
- transition: 0.2s;
-}
-
-nav, nav.scrolled {
- background-color: navy;
-}
-
-nav.transparent {
- background-color: transparent;
 }
 
 .right {
  text-align: right;
 }
 
-nav .right {
- float: right;
- height: 100%;
- display: flex;
- align-items: center;
- position: relative;
-}
-
-.logo {
- display: inline-block;
- height: 100%;
-}
-
-.logo img {
+nav img {
  width: 68px;
-}
-
-nav a {
- -webkit-transition: 0.2s;
- transition: 0.2s;
- text-decoration: none;
-}
-
-nav a:hover {
- opacity: 0.8;
-}
-
-nav a.button {
- background-color: transparent;
-}
-
-/* .toggle-nav-sm {
- display: none;
- float: right;
- height: 100%;
- align-items: center;
-} */
-
-nav ul, footer ul {
- list-style-type: none;
-}
-
-nav ul li, footer ul li {
- display: inline;
+ vertical-align: middle;
 }
 
 nav a, nav span {
@@ -84,44 +30,39 @@ nav a, nav span {
  margin-right: 5px;
 }
 
-.dropdown {
- position: relative;
-}
-
 .dropdown-content {
- font-size: 1em;
- display: none;
- position: absolute;
- top: 2em;
- right: 0;
+ font-size: 0%;
+ display: inline;
+ position: fixed;
+ top: 20px;
+ right: 125px;
+ padding-top: 53px;
 }
 
-.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
- display: block;
+.dropdown:hover .dropdown-content {
+ font-size: 100%;
 }
 
-.dropdown-content ul {
- padding: 0;
- border-top: 2px solid #00043b;
+.dropdown:hover .dropdown-content a {
+ padding: 15px;
+}
+
+.dropdown {
+ display: inline;
+}
+
+nav div {
+ display: inline;
+ height: 72px;
+ vertical-align: middle;
 }
 
 .dropdown-content a {
- padding: 25px 40px;
- background-color: white;
+ padding: 0;
+ background: white;
  color: navy;
  display: block;
  text-align: left;
- opacity: 1 !important;
- margin: 0;
-}
-
-.dropdown-content a:hover {
- color: rgba(0, 0, 128, 0.8);
-}
-
-.container {
- max-width: 700px;
- margin: 0 auto;
 }
 
 .button {
@@ -130,34 +71,21 @@ nav a, nav span {
  color: white;
  padding: 15px;
  background: navy;
- text-decoration: none;
- margin: 5px;
- display: inline-block;
 }
 
 .button:hover {
  color: navy;
  background: white;
  border-color: navy;
- opacity: 1;
 }
 
 header {
- padding-top: 73px;
- background-color: navy;
- background-image: -webkit-gradient(linear, left top, left bottom, from(#03034D), to(#000080));
- background-image: linear-gradient(to bottom, #03034D, #000080);
+ margin-top: 73px;
+ background: navy;
  color: white;
  text-align: center;
  border-bottom-left-radius: 50%;
  border-bottom-right-radius: 50%;
-}
-
-header img {
- display: block;
- margin: 0 auto;
- width: 100%;
- max-width: 700px;
 }
 
 .inline div {
@@ -165,13 +93,7 @@ header img {
 }
 
 .inline {
- display: -webkit-box;
- display: -ms-flexbox;
  display: flex;
-}
-
-.landing-icons {
- height: 5em;
 }
 
 section {
@@ -202,72 +124,9 @@ footer {
  padding: 2%;
  background: #00043b;
  color: white;
- position: relative;
 }
 
-footer li a {
- text-decoration: none;
- margin: 1em;
-}
-
-@media only screen and (max-width: 575px) {
- .inline {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
- }
-
- /* .toggle-nav-sm {
-  display: flex;
- }
-
- nav .right {
-  font-size: 1em;
-  display: none;
-  position: relative;
-  right: 0;
- }
-
- nav ul {
-  top: 2em;
-  padding: 0;
-  border-top: 2px solid #00043b;
- }
-
- nav ul li a.button {
-  background-color: navy !important;
-  color: white !important;
-  border: none;
- }
-
- nav ul li a, nav ul li a.button {
-  padding: 25px 40px;
-  background-color: white;
-  color: navy;
-  display: block;
-  text-align: left;
-  opacity: 1 !important;
-  margin: 0;
-  border-radius: 0;
- } */
-
- footer {
-  text-align: center;
- }
-
- footer ul {
-  margin: 0;
-  padding: 0;
- }
-
- footer ul li {
-  display: block;
-  text-align: center;
-  padding: 15px;
- }
-
- footer .right {
-  text-align: center !important;
- }
+nav .right {
+ margin-top: 25px;
+ float: right;
 }
