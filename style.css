@@ -1,6 +1,11 @@
 body {
  font-family: Arial;
  margin: 0;
+ font-size: 15px;
+}
+
+main {
+ padding-top: 90px;
 }
 
 nav {
@@ -8,10 +13,18 @@ nav {
  top: 0;
  left: 0;
  width: 100%;
- background: navy;
  color: white;
- height: 73px;
  vertical-align: middle;
+ -webkit-transition: 0.2s;
+ transition: 0.2s;
+}
+
+nav, nav.scrolled {
+ background-color: navy;
+}
+
+nav.transparent {
+ background-color: transparent;
 }
 
 .right {
@@ -67,6 +80,7 @@ nav ul, footer ul {
 
 nav ul li, footer ul li {
  display: inline;
+}
 
 nav a, nav span {
  color: white;
@@ -75,23 +89,21 @@ nav a, nav span {
  margin-right: 5px;
 }
 
+.dropdown {
+ position: relative;
+}
+
 .dropdown-content {
- font-size: 0%;
- display: inline;
- position: fixed;
- top: 20px;
- right: 125px;
- padding-top: 53px;
+ font-size: 1em;
+ display: none;
+ position: absolute;
+ top: 2em;
+ right: 0;
 }
 
-.dropdown:hover .dropdown-content {
- font-size: 100%;
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+ display: block;
 }
-
-.dropdown:hover .dropdown-content a {
- padding: 15px;
-}
-
 
 .dropdown-content > ul {
  padding: 0;
@@ -106,21 +118,20 @@ nav a, nav span {
 
 .dropdown-content a {
  padding: 25px 40px;
-
-.dropdown {
- display: inline;
-}
-
-nav div {
- display: inline;
- height: 72px;
- vertical-align: middle;
-}
-
-.dropdown-content a {
  color: navy;
  display: block;
  text-align: left;
+ opacity: 1 !important;
+ margin: 0;
+}
+
+.dropdown-content a:hover {
+ color: rgba(0, 0, 128, 0.8);
+}
+
+.container {
+ max-width: 700px;
+ margin: 0 auto;
 }
 
 .button {
@@ -133,18 +144,20 @@ nav div {
  margin: 5px;
  display: inline-block;
  vertical-align: middle;
-
 }
 
 .button:hover {
  color: navy;
  background: white;
  border-color: navy;
+ opacity: 1;
 }
 
 header {
- margin-top: 73px;
- background: navy;
+ padding-top: 73px;
+ background-color: navy;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#03034D), to(#000080));
+ background-image: linear-gradient(to bottom, #03034D, #000080);
  color: white;
  text-align: center;
  border-bottom-left-radius: 50%;
@@ -163,7 +176,13 @@ header img {
 }
 
 .inline {
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
+}
+
+.landing-icons {
+ height: 5em;
 }
 
 section {
@@ -194,6 +213,7 @@ footer {
  padding: 2%;
  background: #00043b;
  color: white;
+ position: relative;
 }
 
 footer li a {
@@ -237,5 +257,4 @@ footer li a {
  footer .right {
   text-align: center !important;
  }
-
 }

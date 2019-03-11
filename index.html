@@ -4,12 +4,16 @@
   <title>Overcast | Free secure internet chat</title>
   <link href="../icon.png" rel="icon">
   <link href="./style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free, secure peer-to-peer internet chat">
  </head>
  <body>
-  <nav>
-   <a href="./"><img src="./icon.png"></a>
+  <nav class="transparent">
+   <a href="./" class="logo"><img src="./logo-nav.png"></a>
+   <!-- <a href="#!" class="toggle-nav-sm" onClick="toggleMenu()">Menu</a> -->
    <div class="right">
     <ul class="mobile-nav">
+
      <li class="dropdown">
        <!-- Will change later -->
        <a href="#!">
@@ -65,7 +69,6 @@
       <a class="button" href="https://github.com/overcastchat/overcast/releases">Download</a>
      </li>
     </ul>
-
    </div>
   </nav>
   <header>
@@ -74,41 +77,81 @@
    <img src="./chat.PNG">
   </header>
   <section>
-   <h2>Why Overcast?</h2>
-   <div class="inline">
-    <div>
-     <h3>Secure</h3>
-     <p>Since Overcast uses peer-to-peer, no chat data ever goes to the server. And with the app, you can even start your own server.</p>
+   <div class="container">
+    <h2>Why Overcast?</h2>
+    <div class="inline">
+     <div>
+      <img class="landing-icons" src="landing-icons/secure.svg">
+      <h3>Secure</h3>
+      <p>Since Overcast uses peer-to-peer, no chat data ever goes to the server. And with the app, you can even start your own server.</p>
+     </div>
+     <div>
+      <img class="landing-icons" src="landing-icons/free.svg">
+      <h3>Free</h3>
+      <p>Overcast is, and always will be free. And it's open surce too, check it out on Github!</p>
+     </div>
+     <div>
+      <img class="landing-icons" src="landing-icons/no-account.svg">
+      <h3>No Accounts</h3>
+      <p>You only need the app to create servers. Other people can go to your server's link, and chat from a web browser*.</p>
+     </div>
+     <div>
+     <img class="landing-icons" src="landing-icons/customisable.svg">
+      <h3>Customisable</h3>
+      <p>6 different themes to choose from. Custom themes coming soon!.</p>
+     </div>
     </div>
-    <div>
-     <h3>Free</h3>
-     <p>Overcast is, and always will be free. And it's open surce too, check it out on Github!</p>
-    </div>
-    <div>
-     <h3>No Accounts</h3>
-     <p>You only need the app to create servers. Other people can go to your server's link, and chat from a web browser*.</p>
-    </div>
-    <div>
-     <h3>Customisable</h3>
-     <p>6 different themes to choose from. Custom themes coming soon!.</p>
-    </div>
+    <p>*Web chat is only supported in Chrome. In Firefox, messages can be recieved but not sent.</p>
    </div>
-   <p>*Web chat is only supported in Chrome. In Firefox, messages can be recieved but not sent.</p>
   </section>
   <section class="dark">
-   <h3>Ready to try it?</h3>
-   <a class="button" href="https://github.com/overcastchat/overcast/releases">Download Overcast</a>
-   <p>Version 0.0.1 | <a href="https://github.com/overcastchat/overcast/releases">Changelog</a></p>
+   <div class="container">
+    <h3>Ready to try it?</h3>
+    <a class="button" href="https://github.com/overcastchat/overcast/releases">Download Overcast</a>
+    <p>Version 0.0.1 | <a href="https://github.com/overcastchat/overcast/releases">Changelog</a></p>
+   </div>
   </section>
   <section>
-   <h3>Contribute to Overcast</h3>
-   <p>Overcast is made by people like you.</p>
-   <p>You can help us build, debug, and translate Overcast!</p>
-   <p><a class="button" href="https://github.com/overcastchat">Overcast on Github</a> <a href="https://github.com/overcastchat/translations" class="button">Translate Overcast</a></p>
+   <div class="container">
+    <h3>Contribute to Overcast</h3>
+    <p>Overcast is made by people like you.</p>
+    <p>You can help us build, debug, and translate Overcast!</p>
+     <div class="button-bar">
+      <a class="button" href="https://github.com/overcastchat">Overcast on Github</a>
+      <a href="https://github.com/overcastchat/translations" class="button">Translate Overcast</a>
+     </div>
+   </div>
   </section>
   <footer>
-  <p class="right"><a href="https://github.com/overcastchat/overcast/releases">Download</a> <a href="./help">Help Center</a> <a href="https://github.com/overcastchat/translations">Translation</a> <a href="./community-server">Community Server</a> <a href="https://github.com/overcastchat">Github</a></p>
-  <p class="right">Brought to you by <a href="https://github.com/overcastchat/overcast/graphs/contributors">the Overcast contributers</a>. Powered by Electron and PeerJS</p>
+   <ul class="right">
+    <li>
+     <a href="https://github.com/overcastchat/overcast/releases">Download</a>
+    </li>
+    <li>
+     <a href="./help">Help Center</a>
+    </li>
+    <li>
+     <a href="https://github.com/overcastchat/translations">Translation</a>
+    </li>
+    <li>
+     <a href="./community-server">Community Server</a>
+    </li>
+    <li>
+     <a href="https://github.com/overcastchat">Github</a>
+    </li>
+   </ul>
+  <p class="right">Brought to you by <a href="https://github.com/overcastchat/overcast/graphs/contributors">the Overcast contributers</a>. Powered by Electron and PeerJS. Landing page icons (partly modified) by <a href="https://tilda.cc">Tilda</a>.</p>
   </footer>
+  <script>
+   var defaultNavClass = document.querySelector("nav").className;
+   window.addEventListener("scroll", function() {
+    if (window.scrollY > 10) {
+     document.querySelector("nav").className = "scrolled";
+    }
+    else {
+     document.querySelector("nav").className = defaultNavClass;
+    }
+   });
+  </script>
  </body>
 </html>
