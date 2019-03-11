@@ -33,7 +33,7 @@ nav.transparent {
 
 nav .right {
  float: right;
- height: 100%;
+ height: 102px;
  display: flex;
  align-items: center;
  position: relative;
@@ -46,6 +46,10 @@ nav .right {
 
 .logo img {
  width: 68px;
+}
+
+.mobile-nav {
+ display: none;
 }
 
 nav a {
@@ -61,13 +65,6 @@ nav a:hover {
 nav a.button {
  background-color: transparent;
 }
-
-/* .toggle-nav-sm {
- display: none;
- float: right;
- height: 100%;
- align-items: center;
-} */
 
 nav ul, footer ul {
  list-style-type: none;
@@ -100,14 +97,19 @@ nav a, nav span {
  display: block;
 }
 
-.dropdown-content ul {
+.dropdown-content > ul {
  padding: 0;
  border-top: 2px solid #00043b;
+ background-color: white;
+}
+
+.dropdown-content li > ul {
+ padding: 0;
+ padding-left: 1em;
 }
 
 .dropdown-content a {
  padding: 25px 40px;
- background-color: white;
  color: navy;
  display: block;
  text-align: left;
@@ -218,39 +220,13 @@ footer li a {
   flex-direction: column;
  }
 
- /* .toggle-nav-sm {
+ .desktop-md-nav {
+  display: none;
+ }
+
+ .mobile-nav {
   display: flex;
  }
-
- nav .right {
-  font-size: 1em;
-  display: none;
-  position: relative;
-  right: 0;
- }
-
- nav ul {
-  top: 2em;
-  padding: 0;
-  border-top: 2px solid #00043b;
- }
-
- nav ul li a.button {
-  background-color: navy !important;
-  color: white !important;
-  border: none;
- }
-
- nav ul li a, nav ul li a.button {
-  padding: 25px 40px;
-  background-color: white;
-  color: navy;
-  display: block;
-  text-align: left;
-  opacity: 1 !important;
-  margin: 0;
-  border-radius: 0;
- } */
 
  footer {
   text-align: center;
