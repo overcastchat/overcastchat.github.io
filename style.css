@@ -34,7 +34,11 @@ nav.transparent {
 nav .right {
  float: right;
  height: 102px;
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
  align-items: center;
  position: relative;
 }
@@ -50,6 +54,10 @@ nav .right {
 
 .mobile-nav {
  display: none;
+}
+
+.menu-icon {
+  max-height: 30px;
 }
 
 nav a {
@@ -135,6 +143,7 @@ nav a, nav span {
  text-decoration: none;
  margin: 5px;
  display: inline-block;
+ vertical-align: middle;
 }
 
 .button:hover {
@@ -158,7 +167,7 @@ header {
 header img {
  display: block;
  margin: 0 auto;
- width: 100%;
+ width: calc(100% - 5px);
  max-width: 700px;
 }
 
@@ -225,6 +234,8 @@ footer li a {
  }
 
  .mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
  }
 
